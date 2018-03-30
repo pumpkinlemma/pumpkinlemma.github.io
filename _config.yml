@@ -2,14 +2,14 @@
 baseurl: ""
 url: "https://pumpkinlemma.github.io/"
 title: pumpkin lemma # site's title
-description: "description" # used by search engines
+description: "computer science blog" # used by search engines
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
   title: pumpkin lemma # blog's title
   avatar: assets/img/logo-square-300.png
-  favicon: assets/favicon.ico
+  favicon: assets/fav.ico
   gravatar: # Email MD5 hash
 
   # Header and footer text
@@ -46,7 +46,7 @@ theme_settings:
 
   # Scripts / Features 
   google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname:
+  disqus_shortname: https-pumpkinlemma-github-io
   katex: true # Enable if using math markup
   portfolio: true
   search: true
