@@ -14,10 +14,10 @@ theme_settings:
 
   # Header and footer text
   header_text: > #two or three lines to describe your site
-     <p>pampekin <code>_config.yml</code> <br> parappa the rapper.</p>
-  header_text_feature_image: assets/img/pexels/header-prova.jpeg
+     <p>Eat your broccoli </p>
+  header_text_feature_image: assets/img/pexels/b.jpeg
   footer_text: > 
-    cipollarum
+    Fuckin follow
 
   # Icons
   rss: true  # Make sure you created a feed.xml with feed.xml layout
@@ -45,7 +45,7 @@ theme_settings:
   youtube:
 
   # Scripts / Features 
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
+  google_analytics: UA-116667626-1 # Tracking ID, e.g. "UA-000000-01"
   disqus_shortname: https-pumpkinlemma-github-io
   katex: true # Enable if using math markup
   portfolio: true
@@ -91,4 +91,4 @@ sass:
   style: :compressed
 plugins: [jekyll-paginate, jekyll-seo-tag]
 #theme: type-on-strap # Uncomment if using the theme as a jekyll theme gem
-exclude: ["Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", "LICENSE", "README.md", "screenshot.png"]
+exclude: ["Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", "LICENSE", "README.md"]
