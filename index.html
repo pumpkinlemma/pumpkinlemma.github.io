@@ -2,13 +2,14 @@
 layout: default
 ---
 <section class="hero is-primary">
+    <!--<div class="hero-body" style="background-image: url(/assets/images/ptn.jpg)">-->
     <div class="hero-body">
         <div class="container is-fluid">
             <h1 class="title">
                 <img src="{{ "/assets/images/logo-square-300.png" | prepend: site.baseurl }}" width="32px" height="32px"> pumpkin lemma
             </h1>
             <h2 class="subtitle">
-                eat your broccoli.
+                A computer science blog.
             </h2>
         </div>
     </div>
@@ -19,7 +20,7 @@ layout: default
         <div class="card post-card">
             {% if post.thumbnail %}
             <div class="card-image">
-                <figure class="image">
+                <figure class="image-card-home">
                     <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">
                         <img src="{{ post.thumbnail | prepend: site.baseurl }}" alt="{{ post.title }}">
                     </a>
@@ -40,8 +41,8 @@ layout: default
         <br>
         {% endfor %}
         <nav class="pagination is-centered">
-            <a {% if paginator.previous_page %}href="..{{  paginator.previous_page_path }}"{% endif %} class="pagination-previous {% if paginator.previous_page %}{% else %} is-disabled {% endif %}">Önceki Yazılar</a>
-            <a {% if paginator.next_page %}href="..{{  paginator.next_page_path }}"{% endif %} class="pagination-next {% if paginator.next_page %}{% else %} is-disabled {% endif %}">Sonraki Yazılar</a>
+            <a {% if paginator.previous_page %}href="..{{  paginator.previous_page_path }}"{% endif %} class="pagination-previous {% if paginator.previous_page %}{% else %} is-disabled {% endif %}">Prev</a>
+            <a {% if paginator.next_page %}href="..{{  paginator.next_page_path }}"{% endif %} class="pagination-next {% if paginator.next_page %}{% else %} is-disabled {% endif %}">Next</a>
             <ul class="pagination-list">
                 {% for page in (1..paginator.total_pages) %}
                 <li>

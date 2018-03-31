@@ -16,6 +16,7 @@
   <div class="container">
     <nav class="navbar">
       <div class="navbar-brand"> 
+        <img src="{{ "/assets/images/favicon.png" | prepend: site.baseurl }}" class="navbar-logo">
         <a href="{{ "/" | prepend: site.baseurl }}" class="navbar-item">
         {{ site.name }}
         </a>
@@ -70,10 +71,16 @@
       <div id="navMenubd-main" class="navbar-menu">
         <div class="navbar-start">
           <a href="{{ "/" | prepend: site.baseurl }}" class="navbar-item {% if page.url == "/" %} is-active {% endif %}">
-          Blog
-          </a>
+          Home
+          </a> 
           <a href="{{ "/categories" | prepend: site.baseurl }}" class="navbar-item {% if page.url == "/categories/" %} is-active {% endif %}">
           Categories
+          </a>
+          <a href="{{ "/about" | prepend: site.baseurl }}" class="navbar-item {% if page.url == "/about/" %} is-active {% endif %}">
+          About
+          </a>
+          <a href="{{ "/contact" | prepend: site.baseurl }}" class="navbar-item {% if page.url == "/contact/" %} is-active {% endif %}">
+          Contact
           </a>
         </div>
         <div class="navbar-end">
@@ -127,7 +134,7 @@
                   data-social-action="tweet"
                   data-social-target="https://twitter.com/{{ site.social.twitter }}"
                   target="_blank"
-                  href="https://twitter.com/intent/tweet?text=Jekyll Bulma—Jekyll theme based on modern CSS framework based on Flexbox&hashtags=bulmaio&url={{site.url}}{{site.baseurl}}&via={{ site.social.twitter }}">
+                  href="https://twitter.com/intent/tweet?text=Very nice&url={{site.url}}{{site.baseurl}}&via={{ site.social.twitter }}">
                   <span class="icon">
                     <i class="fa fa-twitter"></i>
                   </span>
@@ -136,14 +143,14 @@
                   </span>
                 </a>
               </p>
-              <p class="control">
+              <!-- <p class="control">
                 <a class="button is-primary" href="{{ site.download }}">
                   <span class="icon">
                     <i class="fa fa-download"></i>
                   </span>
                   <span>Download</span>
                 </a>
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
@@ -157,9 +164,7 @@
     <div class="container">
         <div class="content has-text-centered">
             <p>
-                Theme: <strong><a href="https://github.com/erayaydin/jekyll-bulma">Jekyll Bulma</a></strong> by <a href="http://github.com/erayaydin">Eray Aydın</a>. The source code is licensedo
-                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-                is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+                Copyright © pumpkin lemma 2018. </br>Fuckin follow
             </p>
             <p>
                 {% if site.social.github %}
@@ -212,7 +217,7 @@
 <script>
 (function() {
     var d = document, s = d.createElement('script');
-    s.src = '//aydineray.disqus.com/embed.js';
+    s.src = '//https-pumpkinlemma-github-io.disqus.com/embed.js';
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
 })();

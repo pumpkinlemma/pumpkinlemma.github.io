@@ -1,26 +1,26 @@
-name: Giovanni
+name: pumpkin lemma
 description: "Jekyll Bulma Theme, Bulma.io CSS Framework Jekyll Template for Developers"
 baseurl: ""
 url: "https://pumpkinlemma.github.io/"
 download: "#"
 social:
-  github: 
-  email: 
+  github: pumpkinlemma
+  email: lemmapumpkin@gmail.com
   facebook:
   twitter: 
   instagram:
   tumblr:
 author:
-  name: gino
-  bio: gino
-  email: gino
-  image: gino
-  github: gino
-  facebook: gino
-  twitter: gino
+  name: 
+  bio: 
+  email: 
+  image: 
+  github: 
+  facebook: 
+  twitter: 
   instagram:
   tumblr:
-  show_on_post: true
+  show_on_post: false
 permalink: /:categories/:title/
 sass:
   style: compressed

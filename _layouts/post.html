@@ -13,7 +13,7 @@ layout: default
         </div>
     </div>
 </section>
-<section class="section">
+<section class="section" style="padding-bottom: 1em !important">    <!-- remove style if not author -->
     <div class="container is-fluid">
         <div class="content">
             {{ content }}
@@ -21,7 +21,7 @@ layout: default
     </div>
 </section>
 {% if site.author.show_on_post or page.comments %}
-<div class="section">
+<div class="section"  style="padding-top: 0em !important">          <!-- remove style if not author -->
     <div class="container is-fluid">
 
         {% if site.author.show_on_post %}

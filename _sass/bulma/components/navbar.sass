@@ -45,6 +45,15 @@ $navbar-divider-background-color: $border !default
   &.has-shadow
     box-shadow: 0 2px 3px rgba($black, 0.1)
 
+.navbar-logo
+  width: 32px
+  height: 28px !important
+  position: relative
+  top: 50%
+  -webkit-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  transform: translateY(-50%)
+
 .navbar-brand
   +overflow-touch
   align-items: stretch
@@ -249,3 +258,6 @@ a.navbar-item,
     &.is-active
       .navbar-link
         background-color: $navbar-item-hover-background-color
+
+
+
