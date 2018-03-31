@@ -39,8 +39,7 @@ layout: default
                 {% if post.author %}
                 </br>
                 <i><p>
-	                <small> by <a href="{{ post.author-link }}">{{ post.author }}</a>,</small>
-	                <small>{{ post.date | timeago }} </small>
+	                <small>by <a href="{{ post.author-link }}">{{ post.author }} </a> on {{ post.date | date: '%B %d, %Y' }}</small>
                 </p>
                 {% endif %}
             </div>
