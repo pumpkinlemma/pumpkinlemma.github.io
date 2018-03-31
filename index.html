@@ -8,6 +8,7 @@ layout: default
             <h1 class="title">
                 <img src="{{ "/assets/images/logo-square-300.png" | prepend: site.baseurl }}" width="32px" height="32px"> pumpkin lemma
             </h1>
+            <!-- <hr style="width: 16rem"> -->
             <h2 class="subtitle">
                 A computer science blog.
             </h2>
@@ -38,8 +39,8 @@ layout: default
                 {% if post.author %}
                 </br>
                 <i><p>
-	                <small> by <a href="{{ post.author-link }}">{{ post.author }} </a></small>
-	                <!-- <small> on {{ post.day }} {{ post.month }}, {{ post.year }} </small> -->
+	                <small> by <a href="{{ post.author-link }}">{{ post.author }}</a>,</small>
+	                <small>{{ post.date | timeago }} </small>
                 </p>
                 {% endif %}
             </div>
