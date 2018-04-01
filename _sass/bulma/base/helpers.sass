@@ -137,9 +137,12 @@ $displays: 'block' 'flex' 'inline' 'inline-block' 'inline-flex'
 .is-hidden
   display: none !important
 
+// changed this paddingless asshole
 +mobile
   .is-hidden-mobile
     display: none !important
+  .is-paddingless-mobile
+    padding: 3rem 1rem !important
 
 +tablet
   .is-hidden-tablet
