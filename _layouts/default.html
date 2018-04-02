@@ -28,8 +28,6 @@
         <a href="{{ "/" | prepend: site.baseurl }}" class="navbar-item">
         {{ site.name }}
         </a>
-      </div>
-      <div class="nav-center">
         {% if site.social.github %}
         <a href="https://github.com/{{ site.social.github }}" class="navbar-item is-hidden-desktop">
         <span class="icon">
@@ -80,7 +78,7 @@
           <span></span>
         </div>
       </div>
-      <div id="navMenubd-main" class="navbar-menu nav-right">
+      <div id="navMenubd-main" class="navbar-menu">
         <div class="navbar-start">
           <a href="{{ "/" | prepend: site.baseurl }}" class="navbar-item {% if page.url == "/" %} is-active {% endif %}">
           Home
