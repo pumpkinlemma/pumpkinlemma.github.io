@@ -41,5 +41,5 @@ exclude:
   - CNAME
   - vendor
 
-katex: true
+mathjax: true
 
