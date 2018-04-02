@@ -6,10 +6,12 @@ download: "#"
 social:
   github: pumpkinlemma
   email: lemmapumpkin@gmail.com
-  facebook: /
+  facebook: 
   twitter: /
   instagram:
   tumblr:
+  slack: /
+
 author:
   name: 
   bio: 
@@ -21,6 +23,7 @@ author:
   instagram:
   tumblr:
   show_on_post: false
+
 permalink: /:categories/:title/
 sass:
   style: compressed
@@ -46,3 +49,18 @@ exclude:
 # settings
 mathjax: true
 google_analytics: UA-116667626-1
+
+
+defaults:
+- scope:
+    path: ''
+    type: authors
+  values:
+    permalink: /blog/authors/:title/
+    layout: author
+    twitter: 
+
+collections:
+  authors:
+    title: Authors
+    output: true

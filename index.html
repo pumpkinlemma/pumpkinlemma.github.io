@@ -28,22 +28,32 @@ layout: default
                 </figure>
             </div>
             {% endif %}
+
+            <!--
+            {% assign authors = site.authors | where: 'name', 'Linus Maximus' %}
+            {% for author in authors %}
+                {{author.gino}}{{author.twitter}}
+            {% endfor %}
+			-->
+
             <div class="card-content">
                 <h3 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
                 <p class="post-categories">
                     {% for category in post.categories %}
-                    <a href="/{{ category | prepend: site.baseurl }}" class="tag {% if site.data.category[category].color %} is-{{ site.data.category[category].color }} {% endif %}">{{ category }}</a>
+                    <a href="/{{ category | prepend: site.baseurl }}" class="tagg {% if site.data.category[category].color %} is-{{ site.data.category[category].color }} {% endif %}">{{ category }}</a>
                     {% endfor %}
                 </p>
                 {{ post.excerpt }}
                 {% if post.author %}
                 </br>
+                {% assign author = site.authors | where:"name", post.author  | first %}
                 <i><p>
-	                <small>by <a href="{{ post.author-link }}">{{ post.author }} </a> on {{ post.date | date: '%B %-d, %Y' }}</small>
+	                <small>by <a href="{{ author.url }}">{{ author.name }} </a> on {{ post.date | date: '%B %-d, %Y' }}</small>
                 </p></i>
                 {% endif %}
             </div>
         </div>
+
         <br>
         {% endfor %}
         <nav class="pagination is-centered">

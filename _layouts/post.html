@@ -10,7 +10,13 @@ layout: default
             <h2 class="subtitle">
                 {{ page.description }}
             </h2>
-                <i><small>Posted by <a href="{{ page.author-link }}">{{ page.author }} </a> on {{ page.date | date: '%B %-d, %Y' }}</small></i>
+                <p class="post-categories">
+                    {% for category in page.categories %}
+                    <a href="/{{ category | prepend: site.baseurl }}" style="color: #607D8B !important" class="tagg {% if site.data.category[category].color %} is-{{ site.data.category[category].color }} {% endif %}">{{ category }}</a>
+                    {% endfor %}
+                </p>
+                {% assign author = site.authors | where:"name", page.author  | first %}
+                <i><small>Posted by <a href="{{ author.url }}">{{ page.author }} </a> on {{ page.date | date: '%B %-d, %Y' }}</small></i>
         </div>
     </div>
 </section>
@@ -26,54 +32,92 @@ layout: default
     <div class="container is-fluid">
 
         {% if page.author %}
+        {% assign author = site.authors | where:"name", page.author  | first %}
         <div class="box">
             <div class="media">
                 <div class="media-left">
+                    <a href="{{ author.url | prepend: site.baseurl }}">
                     <figure class="image is-64x64">
-                        <img src="{{ page.author-image }}" alt="{{ page.author }}">
+                        <img src="{{ author.image }}" alt="{{ author.name }}">
                     </figure>
+                    </a>
                 </div>
                 <div class="media-content">
                     <div class="content">
                         <p>
-                            <strong>{{ page.author }}</strong>
+                            <strong>{{ author.name }}</strong>
                             <br>
-                            {{ page.author-bio }}
+                            {{ author.bio }}
                         </p>
                     </div>
                     <p>
-                        {% if page.author-github %}
-                        <a href="https://github.com/{{ page.author-github }}">
+                        {% if author.permalink %}
+                        <a href="{{ author.url | prepend: site.baseurl }}">
+                                <span class="icon is-small">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                        </a>
+                        {% endif %}
+                        {% if author.github %}
+                        <a href="https://github.com/{{ author.github }}">
                                 <span class="icon is-small">
                                     <i class="fa fa-github"></i>
                                 </span>
                         </a>
                         {% endif %}
-                        {% if page.author-facebook %}
-                        <a href="https://facebook.com/{{ page.author-facebook }}">
+                        {% if author.facebook %}
+                        <a href="https://facebook.com/{{ author.facebook }}">
                                 <span class="icon is-small">
                                     <i class="fa fa-facebook"></i>
                                 </span>
                         </a>
                         {% endif %}
-                        {% if page.author-twitter %}
-                        <a href="https://twitter.com/{{ page.author-twitter}}">
+                        {% if author.twitter %}
+                        <a href="https://twitter.com/{{ author.twitter}}">
                                 <span class="icon is-small">
                                     <i class="fa fa-twitter"></i>
                                 </span>
                         </a>
                         {% endif %}
-                        {% if page.author-instagram %}
-                        <a href="https://instagram.com/{{ page.author-instagram}}">
+                        {% if author.instagram %}
+                        <a href="https://instagram.com/{{ author.instagram}}">
                                 <span class="icon is-small">
                                     <i class="fa fa-instagram"></i>
                                 </span>
                         </a>
                         {% endif %}
-                        {% if page.author-tumblr %}
-                        <a href="https://tumblr.com/{{ page.author-tumblr}}">
+                        {% if author.tumblr %}
+                        <a href="https://tumblr.com/{{ author.tumblr}}">
                                 <span class="icon is-small">
                                     <i class="fa fa-tumblr"></i>
+                                </span>
+                        </a>
+                        {% endif %}
+                        {% if author.personal-site %}
+                        <a href="{{ page.personal-site}}">
+                                <span class="icon is-small">
+                                    <i class="fa fa-link"></i>
+                                </span>
+                        </a>
+                        {% endif %}
+                        {% if author.linkedin %}
+                        <a href="https://linkedin.com/{{ page.linkedin}}">
+                                <span class="icon is-small">
+                                    <i class="fa fa-linkedin"></i>
+                                </span>
+                        </a>
+                        {% endif %}
+                        {% if author.stackoverflow %}
+                        <a href="https://stackoverflow.com/{{ page.stackoverflow}}">
+                                <span class="icon is-small">
+                                    <i class="fa fa-stack-overflow"></i>
+                                </span>
+                        </a>
+                        {% endif %}
+                        {% if author.slack %}
+                        <a href="{{ page.slack}}">
+                                <span class="icon is-small">
+                                    <i class="fa fa-slack"></i>
                                 </span>
                         </a>
                         {% endif %}

@@ -13,3 +13,110 @@ layout: default
         </div>
     </div>
 </section>
+
+<section class="section is-paddingless-touch">    <!-- remove style if not author -->
+    <div class="container is-fluid">
+        <h1 style="font-size: 2em; margin-bottom: .5em; color: #363636;">Authors</h1>
+
+{% for author in site.authors %}
+<div class="section" style="padding: 1rem 7% !important">          <!-- remove style if not author -->
+    <div class="container is-fluid">
+
+        
+        <div class="box">
+            <div class="media">
+                <div class="media-left">
+                    <a href="{{ author.url | prepend: site.baseurl }}">
+                        <figure class="image is-64x64">
+                            <img src="{{ author.image }}" alt="{{ author.name }}">
+                        </figure>
+                        </a>
+                </div>
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>{{ author.name }}</strong>
+                            <br>
+                            {{ author.bio }}
+                        </p>
+                    </div>
+                    <p> 
+                        {% if author.permalink %}
+                        <a href="{{ author.url | prepend: site.baseurl }}">
+                                <span class="icon is-small">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                        </a>
+                        {% endif %}
+                        {% if author.github %}
+                        <a href="https://github.com/{{ author.github }}">
+                                <span class="icon is-small">
+                                    <i class="fa fa-github"></i>
+                                </span>
+                        </a>
+                        {% endif %}
+                        {% if author.stackoverflow %}
+                        <a href="https://stackoverflow.com/{{ author.stackoverflow}}">
+                                <span class="icon is-small">
+                                    <i class="fa fa-stack-overflow"></i>
+                                </span>
+                        </a>
+                        {% endif %}
+                        {% if author.facebook %}
+                        <a href="https://facebook.com/{{ author.facebook }}">
+                                <span class="icon is-small">
+                                    <i class="fa fa-facebook"></i>
+                                </span>
+                        </a>
+                        {% endif %}
+                        {% if author.linkedin %}
+                        <a href="https://linkedin.com/{{ author.linkedin}}">
+                                <span class="icon is-small">
+                                    <i class="fa fa-linkedin"></i>
+                                </span>
+                        </a>
+                        {% endif %}
+                        {% if author.twitter %}
+                        <a href="https://twitter.com/{{ author.twitter}}">
+                                <span class="icon is-small">
+                                    <i class="fa fa-twitter"></i>
+                                </span>
+                        </a>
+                        {% endif %}
+                        {% if author.instagram %}
+                        <a href="https://instagram.com/{{ author.instagram}}">
+                                <span class="icon is-small">
+                                    <i class="fa fa-instagram"></i>
+                                </span>
+                        </a>
+                        {% endif %}
+                        {% if author.tumblr %}
+                        <a href="https://tumblr.com/{{ author.tumblr}}">
+                                <span class="icon is-small">
+                                    <i class="fa fa-tumblr"></i>
+                                </span>
+                        </a>
+                        {% endif %}
+                        {% if author.slack %}
+                        <a href="{{ author.slack}}">
+                                <span class="icon is-small">
+                                    <i class="fa fa-slack"></i>
+                                </span>
+                        </a>
+                        {% endif %}
+                        {% if author.personal-site %}
+                        <a href="{{ author.personal-site}}">
+                                <span class="icon is-small">
+                                    <i class="fa fa-link"></i>
+                                </span>
+                        </a>
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+</div>
+</section>

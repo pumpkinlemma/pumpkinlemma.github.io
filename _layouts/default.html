@@ -95,6 +95,13 @@
         </span>
         </a>
         {% endif %}
+        {% if site.social.slack %}
+        <a href="{{ site.social.slack}}" class="navbar-item is-hidden-desktop">
+          <span class="icon">
+            <i class="fa fa-slack"></i>
+          </span>
+        </a>
+        {% endif %}
         <div class="navbar-burger burger" data-target="navMenubd-main">
           <span></span>
           <span></span>
@@ -111,9 +118,6 @@
           </a>
           <a href="{{ "/about" | prepend: site.baseurl }}" class="navbar-item {% if page.url == "/about/" %} is-active {% endif %}">
           About
-          </a>
-          <a href="{{ "/contact" | prepend: site.baseurl }}" class="navbar-item {% if page.url == "/contact/" %} is-active {% endif %}">
-          Contact
           </a>
         </div>
         <div class="navbar-end">
@@ -159,6 +163,13 @@
           <span class="icon">
               <i class="fa fa-tumblr"></i>
           </span>
+          </a>
+          {% endif %}
+          {% if site.social.slack %}
+          <a href="{{ site.social.slack}}" class="navbar-item is-hidden-desktop-only">
+            <span class="icon">
+              <i class="fa fa-slack"></i>
+            </span>
           </a>
           {% endif %}
           <!--<div class="navbar-item">
@@ -230,6 +241,11 @@
                 {% if site.social.tumblr %}
                 <a class="icon" href="https://{{ site.social.tumblr }}.tumblr.com">
                     <i class="fa fa-tumblr"></i>
+                </a>
+                {% endif %}
+                {% if site.social.slack %}
+                <a class="icon" href="{{ site.social.slack}}">
+                  <i class="fa fa-slack"></i>
                 </a>
                 {% endif %}
             </p>
