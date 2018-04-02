@@ -7,4 +7,7 @@ group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
    gem "jekyll-gist"
    gem "jekyll-timeago"
+   gem 'jekyll-seo-tag'
+   gem 'jekyll-sitemap'
+   gem 'jekyll-analytics'
 end

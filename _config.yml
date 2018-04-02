@@ -1,5 +1,5 @@
 name: pumpkin lemma
-description: "Jekyll Bulma Theme, Bulma.io CSS Framework Jekyll Template for Developers"
+description: "Computer science blog"
 baseurl: ""
 url: "https://pumpkinlemma.github.io/"
 download: "#"
@@ -32,6 +32,9 @@ plugins:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-gist
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-analytics
 
 exclude:
   - Gemfile
@@ -42,4 +45,8 @@ exclude:
   - vendor
 
 mathjax: true
+
+jekyll_analytics:
+  GoogleAnalytics:          # Add, if you want to track with Google Analytics
+    id: UA-116667626-1          # Required - replace with your tracking id
 
