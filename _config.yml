@@ -34,7 +34,6 @@ plugins:
   - jekyll-gist
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-analytics
 
 exclude:
   - Gemfile
@@ -44,9 +43,6 @@ exclude:
   - CNAME
   - vendor
 
+# settings
 mathjax: true
-
-jekyll_analytics:
-  GoogleAnalytics:          # Add, if you want to track with Google Analytics
-    id: UA-116667626-1          # Required - replace with your tracking id
-
+google_analytics: UA-116667626-1

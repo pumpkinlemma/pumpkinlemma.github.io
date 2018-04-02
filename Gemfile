@@ -9,5 +9,4 @@ group :jekyll_plugins do
    gem "jekyll-timeago"
    gem 'jekyll-seo-tag'
    gem 'jekyll-sitemap'
-   gem 'jekyll-analytics'
 end
