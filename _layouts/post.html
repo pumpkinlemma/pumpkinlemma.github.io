@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<section class="hero is-primary">
+<section class="hero is-primary bgheader">
     <div class="hero-body">
         <div class="container is-fluid">
             <h1 class="title">
@@ -12,7 +12,7 @@ layout: default
             </h2>
                 <p class="post-categories">
                     {% for category in page.categories %}
-                    <a href="/{{ category | prepend: site.baseurl }}" style="color: #607D8B !important" class="tagg {% if site.data.category[category].color %} is-{{ site.data.category[category].color }} {% endif %}">{{ category }}</a>
+                    <a href="/{{ category | prepend: 'categories#category-' | prepend: site.baseurl }}" style="color: #607D8B !important" class="tagg {% if site.data.category[category].color %} is-{{ site.data.category[category].color }} {% endif %}">{{ category }}</a>
                     {% endfor %}
                 </p>
                 {% assign author = site.authors | where:"name", page.author  | first %}

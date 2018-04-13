@@ -1,12 +1,14 @@
 ---
 layout: default
 ---
-<section class="hero is-primary">
+<section class="hero is-primary bgheader bgheader2">
 	<!--<div class="hero-body" style="background-image: url(/assets/images/ptn.jpg)">-->
 	<div class="hero-body">
 		<div class="container is-fluid">
-			<h1 class="title">
-				<img src="{{ "/assets/images/logo-square-300.png" | prepend: site.baseurl }}" width="32px" height="32px"> pumpkin lemma
+			<h1 class="title" style="font-variant: small-caps !important">
+				<!--<img src="{{ "/assets/images/logo-square-300.png" | prepend: site.baseurl }}" width="32px" height="32px"> -->
+				<!--<p style="color:#F57C00"></p>-->
+				Pumpkin Lemma
 			</h1>
 			<!-- <hr style="width: 16rem"> -->
 			<h2 class="subtitle">
@@ -33,7 +35,7 @@ layout: default
 	        	<h3 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
 	        	<p class="post-categories">
 	        		{% for category in post.categories %}
-	        			<a href="/{{ category | prepend: site.baseurl }}" class="tagg {% if site.data.category[category].color %} is-{{ site.data.category[category].color }} {% endif %}">{{ category }}</a>
+	        			<a href="/{{ category | prepend: 'categories#category-' | prepend: site.baseurl }}" class="tagg {% if site.data.category[category].color %} is-{{ site.data.category[category].color }} {% endif %}">{{ category }}</a>
 	        		{% endfor %}
 	        	</p>
 	        	{{ post.excerpt }}

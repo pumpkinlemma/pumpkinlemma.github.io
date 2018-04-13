@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<section class="hero is-primary">
+<section class="hero is-primary bgheader">
     <div class="hero-body">
         <div class="container is-fluid">
             <h1 class="title">
@@ -114,7 +114,7 @@ layout: default
                 <div style="text-align: center; ">
                 {% assign posts = site.posts | where: 'author', page.title %}
                 {% for post in posts %}
-                    <div class="card post-card" style="text-align: center; max-width: 450px; display:inline-block; margin:10px">
+                    <div class="card post-card" style="text-align: center; max-width: 20rem; display:inline-block; margin:10px">
 
                         {% if post.thumbnail %}
                         <div class="card-image">
@@ -130,7 +130,7 @@ layout: default
                             <h3 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
                             <p class="post-categories">
                                 {% for category in post.categories %}
-                                <a href="/{{ category | prepend: site.baseurl }}" class="tagg {% if site.data.category[category].color %} is-{{ site.data.category[category].color }} {% endif %}">{{ category }}</a>
+                                <a href="/{{ category | prepend: 'categories#category-' | prepend: site.baseurl }}" class="tagg {% if site.data.category[category].color %} is-{{ site.data.category[category].color }} {% endif %}">{{ category }}</a>
                                 {% endfor %}
                             </p>
                             <!--{{ post.excerpt }}-->
